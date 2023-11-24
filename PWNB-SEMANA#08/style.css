@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+}
+
+.card{  
+    width: 25%;
+    background-color: burlywood;
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo{
+    margin-top: 0;
+  }
+
+  .formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+  }
+
+  .campo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campo label{
+    text-align: start;
+  }
+
+  button{
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: gray;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-color: blue;
+  }
