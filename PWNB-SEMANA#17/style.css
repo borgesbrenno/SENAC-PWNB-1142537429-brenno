@@ -1,0 +1,142 @@
+h1{
+    text-align: 50rem;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  gap: 30rem;
+}
+
+img{
+  width: 150px;
+}
+
+.card{  
+    width: 25%;
+    background-color: burlywood;
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-lista{  
+    width: 40%;
+    background-color: burlywood;
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo{
+    margin-top: 0;
+  }
+
+  .formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+  }
+
+  .campo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campo label{
+    text-align: start;
+  }
+
+  button{
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: gray;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  button:hover{
+    background-color: blue;
+  }
+
+  .imagens{
+    width: 600px;
+  }
+
+  .picture{
+    width: 100rem;
+  }
+
+  table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-column {
+            width: 100px;
+        }
+
+        .action-button {
+            padding: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            width: 5rem;
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .delete-button {
+           width: 5rem;
+            background-color: #f44336;
+            color: white;
+        }
+        #back-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .menu-button {
+          display: block;
+          width: 200px;
+          padding: 10px;
+          margin: 10px;
+          text-align: center;
+          background-color: #3498db;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          font-size: 18px;
+        }
+        .menu-button:hover {
+          background-color: #2980b9;
+        }
+
+      

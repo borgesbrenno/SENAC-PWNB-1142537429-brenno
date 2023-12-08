@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar</title>
+    <meta http - equiv ="X-UA - Compatible " content ="IE=edge ">
+    <meta name =" viewport " content =" width=device-width , initial - scale =1.0 ">
+    <link rel ="stylesheet" href ="style.css">
+</head>
+    <div id="header">
+      <img src="./assets/logo.jpeg" alt="logo">
+    <left><h1>FESTIVAL DE CINEMA DE GRAMADO</h1></left>
+    </div>
+    <hr>
+
+    <center>
+			<div class="card-lista">
+				<h1 class="titulo">Listar clientes</h1>
+				<table id="clientesTable">
+						<thead>
+								<tr>
+										<th>Nome</th>
+										<th>Data de Nascimento</th>
+										<th>CEP</th>
+										<th>Endereço</th>
+										<th class="action-column">Ação</th>
+								</tr>
+						</thead>
+						<tbody>
+						</tbody>
+				</table>
+				<a href="Projeto PW.html" id="back-button">Voltar</a>
+			</div>
+		</center>
+
+		    <script>
+        function carregarClientes() {
+            var clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+            var table = document.getElementById('clientesTable').getElementsByTagName('tbody')[0];
+            table.innerHTML = '';
+
+            clientes.forEach(function (cliente, index) {
+                var row = table.insertRow();
+                row.insertCell(0).innerText = cliente.nome;
+                row.insertCell(1).innerText = cliente.dataNascimento;
+                row.insertCell(2).innerText = cliente.cep;
+                row.insertCell(3).innerText = cliente.endereco;
+
+                var cell = row.insertCell(4);
+
+                var editarButton = document.createElement('button');
+                editarButton.className = 'action-button edit-button';
+                editarButton.innerText = 'Editar';
+                cell.appendChild(editarButton);
+
+                var excluirButton = document.createElement('button');
+                excluirButton.className = 'action-button delete-button';
+                excluirButton.innerText = 'Excluir';
+
+                excluirButton.addEventListener('click', function () {
+                    clientes.splice(index, 1);
+                    localStorage.setItem('clientes', JSON.stringify(clientes));
+                    carregarClientes();
+                });
+
+                cell.appendChild(excluirButton);
+            });
+        }
+        carregarClientes();
+    </script>
+  </body>
+</html>
+  
